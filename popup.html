@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Activity Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        #siteList {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>User Details</h3>
+    <form id="userForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="skills">Skills (comma-separated):</label><br>
+        <input type="text" id="skills" name="skills" required><br><br>
+
+        <button type="submit" class="button">Save Details</button>
+    </form>
+
+    <h3>Saved Details</h3>
+    <button id="showDetailsBtn" class="button">Show Saved Details</button>
+    <div id="savedDetails"></div>
+
+    <h3>Visited Sites</h3>
+    <button id="showSitesBtn" class="button">Show Visited Sites</button>
+    <ul id="siteList"></ul>
+
+    <script src="popup.js"></script>
+</body>
+</html>
